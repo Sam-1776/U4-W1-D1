@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -10,10 +11,10 @@ public class Main {
         String[] arrUno = {"a", "b", "c", "d", "e", "f"};
         int prodotto = moltiplica(3, 5);
         String mix = concatena("ciao", 3);
-//        String[] arr = inserisciInArray( arrUno, "f");
+        String[] arr = inserisciInArray( arrUno, "f");
         System.out.println("Il prodotto è: " + prodotto);
         System.out.println("La concatenazione è: " + mix);
-//        System.out.println(arr);
+        System.out.println("L'Array nuovo è: " + Arrays.toString(arr));
 
 
         // ESERCIZIO 2
@@ -49,12 +50,16 @@ public class Main {
         return x+y;
     }
 
-//    public static String[] inserisciInArray (String[] x , String y){
-//            x[6] = x[5];
-//            x[5] = x[4];
-//            x[3] = y;
-//        return x;
-//    }
+    public static String[] inserisciInArray (String[] x , String y){
+        String[] newArr = new String[6];
+        newArr[0] = x[0];
+        newArr[1] = x[1];
+        newArr[2] = y;
+        newArr[3] = x[2];
+        newArr[4] = x[3];
+        newArr[5] = x[4];
+        return newArr;
+    }
 
     public static double perimetrorettangolo(double x , double y){
         double b = 2*x;
